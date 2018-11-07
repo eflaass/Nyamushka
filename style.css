@@ -1,0 +1,241 @@
+@font-face {
+  font-family: Exo;
+  src:url("fonts/Exo.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Trebuchet;
+  src:url("fonts/trebuc.ttf") format("truetype");
+}
+
+body {
+  background:linear-gradient(to bottom, rgba(0,0,0,0.7), transparent, rgba(0,0,0,0.7)), url("img/backgroundPattern.png");
+  background-blend-mode: overlay;
+  width:100vw;
+  height:100vh;
+  margin:0;
+  font-family: Exo;
+  color:white;
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  height:100%;
+  box-sizing: border-box;
+}
+
+.grid-wrapper {
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr 5fr 1fr;
+  justify-items:center;
+  align-items: center;
+  width:95%;
+  height: 80%;
+  box-sizing: border-box;
+  margin:auto;
+}
+
+.headfoot {
+  height:10%;
+}
+
+h1 {
+  font-size: 2.9vw;
+  text-align: center;
+  grid-area: 1/1/2/4;
+  font-weight: normal;
+}
+
+.foiegras, .foiegras-disabled {
+  background-size: 320px 480px;
+  width:320px;
+  height:480px;
+  grid-area:2/1/3/2;
+}
+
+.foiegras {
+  background: url(img/foiegras_default.png);
+}
+
+.foiegras-hover {
+  background: url(img/foiegras_defaultHover.png);
+}
+
+.foiegras-selected {
+  background: url(img/foiegras_selected.png);
+}
+
+.foiegras-selected-hover {
+  background: url(img/foiegras_selectedHover.png);
+}
+
+.foiegras-disabled {
+  background: url(img/foiegras_disabled.png);
+}
+
+.ryba, .ryba-disabled {
+  background-size: 320px 480px;
+  width:320px;
+  height:480px;
+  grid-area:2/2/3/3;
+}
+
+.ryba {
+  background: url(img/ryba_default.png);
+}
+
+.ryba-hover {
+  background: url(img/ryba_defaultHover.png);
+}
+
+.ryba-selected {
+  background: url(img/ryba_selected.png);
+}
+
+.ryba-selected-hover {
+  background: url(img/ryba_selectedHover.png);
+}
+
+.ryba-disabled {
+  background: url(img/ryba_disabled.png);
+}
+
+.kura, .kura-disabled {
+  background-size: 320px 480px;
+  width:320px;
+  height:480px;
+  grid-area:2/3/3/4;
+}
+
+.kura {
+  background: url(img/kura_default.png);
+}
+
+.kura-hover {
+  background: url(img/kura_defaultHover.png);
+}
+
+.kura-selected {
+  background: url(img/kura_selected.png);
+}
+
+.kura-selected-hover {
+  background: url(img/kura_selectedHover.png);
+}
+
+.kura-disabled {
+  background: url(img/kura_disabled.png);
+}
+
+.foiegras_text span, .ryba_text span, .kura_text span  {
+  border-bottom:1px dashed #1698d9;
+  color:#1698d9;
+  text-decoration: none;
+}
+
+.foiegras_text span:hover, .ryba_text span:hover, .kura_text span:hover {
+  cursor: pointer;
+}
+
+.foiegras_text, .foiegras_text_alt, .foiegras_text_disabled, .ryba_text, .ryba_text_alt, .ryba_text_disabled, .kura_text, .kura_text_alt, .kura_text_disabled {
+  font-family: Trebuchet;
+  font-size: 1.1vw;
+  align-self:start;
+  margin-top:0.5vh;
+  text-shadow: 2px 2px 2px black;
+}
+
+.foiegras_text, .foiegras_text_alt, .foiegras_text_disabled {
+  grid-area: 3/1/4/2;
+}
+
+.foiegras_text_disabled, .ryba_text_disabled, .kura_text_disabled {
+  color: #e3e7a4
+}
+
+.foiegras_text_alt, .foiegras_text_disabled, .ryba_text_alt, .ryba_text_disabled, .kura_text_alt, .kura_text_disabled, .text_hide {
+  visibility:hidden;
+}
+
+.ryba_text, .ryba_text_alt, .ryba_text_disabled {
+  grid-area: 3/2/4/3;
+}
+
+.kura_text, .kura_text_alt, .kura_text_disabled {
+  grid-area: 3/3/4/4;
+}
+
+.text_visible {
+  visibility: visible;
+}
+
+@media screen and (max-width:500px) {
+.grid-wrapper {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr 1fr 5fr 1fr 5fr 1fr;
+}
+h1 {
+  grid-area: 1/1/2/2;
+  font-size:6vw;
+}
+.foiegras, .foiegras-disabled {
+  grid-area: 2/1/3/2;
+}
+.foiegras_text, .foiegras_text_alt, .foiegras_text_disabled {
+  grid-area: 3/1/4/2;
+}
+.ryba, .ryba-disabled {
+  grid-area: 4/1/5/2;
+}
+.ryba_text, .ryba_text_alt, .ryba_text_disabled {
+  grid-area: 5/1/6/2;
+}
+.kura, .kura-disabled {
+  grid-area: 6/1/7/2;
+}
+.kura_text, .kura_text_alt, .kura_text_disabled {
+  grid-area: 7/1/8/2;
+}
+.foiegras_text, .foiegras_text_alt, .foiegras_text_disabled, .ryba_text, .ryba_text_alt, .ryba_text_disabled, .kura_text, .kura_text_alt, .kura_text_disabled {
+  font-size:3vw;
+  margin-bottom:2vh;
+  margin-top:1.5vh;
+}
+}
+@media screen and (min-width:501px) and (max-width:999px) {
+.grid-wrapper {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr 5fr 1fr;
+}
+h1 {
+  grid-area: 1/1/2/3;
+  font-size:5vw;
+}
+.foiegras, .foiegras-disabled {
+  grid-area: 2/1/3/3;  
+}
+.foiegras_text, .foiegras_text_alt, .foiegras_text_disabled {
+  grid-area: 3/1/4/3;
+}
+.ryba, .ryba-disabled {
+  grid-area: 4/1/5/2;
+}
+.ryba_text, .ryba_text_alt, .ryba_text_disabled {
+  grid-area: 5/1/6/2;
+}
+.kura, .kura-disabled {
+  grid-area: 4/2/5/3;
+}
+.kura_text, .kura_text_alt, .kura_text_disabled {
+  grid-area: 5/2/6/3;
+}
+.foiegras_text, .foiegras_text_alt, .foiegras_text_disabled, .ryba_text, .ryba_text_alt, .ryba_text_disabled, .kura_text, .kura_text_alt, .kura_text_disabled {
+  font-size:2vw;
+  margin-bottom:2vh;
+  margin-top:1.5vh;
+}
+}
