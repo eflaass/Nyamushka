@@ -174,7 +174,7 @@ h1 {
   visibility: visible;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:479px) {
 .grid-wrapper {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 5fr 1fr 5fr 1fr 5fr 1fr;
@@ -207,7 +207,7 @@ h1 {
   margin-top:1.5vh;
 }
 }
-@media screen and (min-width:501px) and (max-width:999px) {
+@media screen and (min-width:480px) and (max-width:800px) {
 .grid-wrapper {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 5fr 1fr 5fr 1fr;
